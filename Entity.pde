@@ -14,6 +14,7 @@ public class Entity {
  
  public void draw() {
   fill(c);
+  noStroke();
   rect(pos.x, pos.y, w, h);
  }
  

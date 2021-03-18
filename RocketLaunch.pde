@@ -1,4 +1,4 @@
-ArrayList<Rocket> rockets = new ArrayList();
+ ArrayList<Rocket> rockets = new ArrayList();
 Obstacle[] obstacles = new Obstacle[5];
 
 public void setup() {
