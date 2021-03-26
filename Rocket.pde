@@ -9,9 +9,18 @@ public class Rocket extends Entity {
    super(#00FFFF, 10, 30, x,y);
    float angle = random(PI * 1.3, PI * 1.7);
    vel = PVector.fromAngle(angle);
-   force = PVector.fromAngle(angle).mult(0.1);
+   force = PVector.fromAngle(angle).mult(0);
    brain = new Brain(this); 
    nextObstacle = obstacles[0];
+ }
+ 
+ public Rocket(int x, int y, Brain b) {
+    super(#00FFFF, 10, 30, x, y);
+    float angle = random(PI * 1.3, PI * 1.7);
+    vel = PVector.fromAngle(angle);
+    force = PVector.fromAngle(angle).mult(0);
+    brain = new Brain(this, b);
+    nextObstacle = obstacles[0];
  }
  
  public void move() {
